@@ -1,6 +1,8 @@
 ---
 category: General
 title: 'X-Source Header'
+
+layout: default
 ---
 
 Some of the resources available in the TribeHR API support the concept of a source - that is, they keep
@@ -16,5 +18,5 @@ The following resources support the X-Source header:
 
 - Kudos
 - Comments
-- **Note:** The source is applied to resources on their creation; sending an `X-Source` header with a `PUT` request
+- **Note:** The source is applied to resources on their creation; sending an **`X-Source`** header with a **`PUT`** request
 does not change a resource's source property.

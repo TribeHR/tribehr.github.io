@@ -1,5 +1,5 @@
 ---
-exclude: ['README.markdown']
+exclude: ['README.md']
 permalink: ':title'
 highlighter: pygments
 safe: false

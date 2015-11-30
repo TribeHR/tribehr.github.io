@@ -1,6 +1,8 @@
 ---
 category: General
 title: 'Permissions and Visibility'
+
+layout: default
 ---
 
 All API requests are made on behalf of the user represented by the HTTP Basic Authentication information
@@ -15,7 +17,7 @@ or null data always means that the user has visibility on that data, but the val
 or null.
 
 ## User Groups
-Each user is assigned to a particular group: `Employees`, `Managers`, or `Administrators`. 
+Each user is assigned to a particular group: **`Employees`**, **`Managers`**, or **`Administrators`**. 
 
 - Administrators have access to all data in TribeHR. 
 

@@ -1,13 +1,15 @@
 ---
 category: General
 title: 'Making API Requests'
+
+layout: default
 ---
 
 TribeHR differentiates API requests from regular web requests based on the end of the URL. TribeHR assumes
-that any request ending with `.json` or `.xml` is an API request; all other requests are treated as 
+that any request ending with **`.json`** or **`.xml`** is an API request; all other requests are treated as 
 regular web requests and are returned as HTML.
 
-All requests made against API v2 **must** include the `X-API-Version` header. Otherwise your request
+All requests made against API v2 **must** include the **`X-API-Version`** header. Otherwise your request
 will be treated as an API v1 request, and you will miss out on improvements, modifications, and new 
 features that will be made available in the future.
 
