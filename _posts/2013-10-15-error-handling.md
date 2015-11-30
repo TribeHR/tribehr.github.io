@@ -30,3 +30,21 @@ We use the following error codes:
 - **`UNKNOWN_SUBDOMAIN`** - indicates that the *account* (not the user; see "Users vs Accounts", above) could not be found. Returned as part of a `404 (Not Found)` response.
 - **`MAINTENANCE`** - indicates that TribeHR is undergoing maintenance and will be back up and running later. Returned as part of a `503 (Service Unavailable)` response.
 - **`ERROR`** - an unknown error occurred.
+
+### Examples
+
+Requesting an item that doesn't exist example:
+
+```GET /events/1234567.json
+X-API-Version: 2.0.0
+```Status: 404```
+```Content-Type: application/json
+{
+    "error": {
+        "code": "NOT_FOUND",
+        "messages": [
+            "Invalid Event"
+        ]
+    }
+}
+```

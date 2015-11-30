@@ -35,11 +35,12 @@ id=252&name=Updated%20Event&event_type%5Bid%5D=1&location%5B%5D%5Bid%5D=1&locati
 ```
 
 ## Differences between POST and PUT
+
 **`POST`** requests create new items; **`PUT`** requests update existing ones.
 
 **`POST`** requests are documented below with a list of parameters, some of which may be marked "required."
 Unless otherwise documented, the corresponding **`PUT`** requests for each resource type support all of the
-same parameters as the **`POST`** request, but *all parameters except for **`id`* are optional (again, unless
+same parameters as the **`POST`** request, but **all parameters** except for **`:id`** are optional (again, unless
 otherwise documented). If you leave a parameter out of a **`PUT`** request, it means that you do not wish to
 change the existing value.
 
