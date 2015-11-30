@@ -1,5 +1,5 @@
 ---
-category: Intro
+category: General
 path: '/login'
 title: 'Authentication'
 ---

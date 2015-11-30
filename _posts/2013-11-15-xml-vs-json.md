@@ -1,5 +1,5 @@
 ---
-category: Intro
+category: General
 title: 'XML vs JSON'
 ---
 
