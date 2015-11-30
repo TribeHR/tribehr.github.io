@@ -636,3 +636,9 @@ code {
   padding: 15px;
   white-space: pre;
 }
+
+/* API top bar info */
+#topnav {
+  padding-top: 20px;
+  padding-left: 260px;
+}
