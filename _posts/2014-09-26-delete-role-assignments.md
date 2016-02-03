@@ -14,6 +14,12 @@ The {id} in the URL is the ID of the user to remove the role assignments from.
 
 If successful, the response to your request will include the list of all roles currently assigned to the specified user.
 
+### API Client Note with Array Properties
+If you're using a manual API client, such as Postman, you'll want to ensure that you've set the following header when trying to submit any API requests where a property can be an array (such as **`role_id%5B%5D=12`**):
+```Content-Type: application/x-www-form-urlencoded```
+
+If you're using a form view, ensure that the Content-Type header above is set and that the "key" text reads: **`role_id[]`**
+
 ### Request
 
 Parameters:
