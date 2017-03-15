@@ -1,5 +1,5 @@
 ---
-category: API v2
+category: API v3
 title: 'Create a New Event'
 type: 'POST'
 path: '/events'
@@ -19,10 +19,12 @@ Parameters:
 
 ### Request
 
-```POST /events.json
-X-API-Version: 2.0.0
 ```
-```name=New%20event&
+POST /events.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
+
+name=New%20event&
 start_date=2013-08-30T17%3A00%3A00%2B00%3A00&
 end_date=2013-08-30T22%3A00%3A00%2B00%3A00&
 location[][id]=1&
@@ -33,8 +35,12 @@ event_type[id]=1
 ```
 
 ### Response
-```Status: 200 OK```
-```Content-Type: application/json
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
 {
     "id": 254,
     "name": "New event",

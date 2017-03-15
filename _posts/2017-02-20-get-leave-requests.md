@@ -1,5 +1,5 @@
 ---
-category: API v2
+category: 'API v3' 
 title: 'Getting Leave Requests'
 type: 'GET'
 path: '/leave_requests'
@@ -26,12 +26,16 @@ There are two optional querystring filers available for the listing of all leave
 Get all leave requests in TribeHR
 
 
-```GET /leave_requests.json
-X-API-Version: 2.0.0
+```
+GET /leave_requests.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
-```GET /leave_requests.json?status=all
-X-API-Version: 2.0.0
+```
+GET /leave_requests.json?status=all
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Request
@@ -39,12 +43,16 @@ X-API-Version: 2.0.0
 Get all APPROVED leave requests in TribeHR
 
 
-```GET /leave_requests/approved.json
-X-API-Version: 2.0.0
+```
+GET /leave_requests/approved.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
-```GET /leave_requests.json?status=approved
-X-API-Version: 2.0.0
+```
+GET /leave_requests.json?status=approved
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Request
@@ -52,12 +60,16 @@ X-API-Version: 2.0.0
 Get all PENDING leave requests in TribeHR
 
 
-```GET /leave_requests/pending.json
-X-API-Version: 2.0.0
+```
+GET /leave_requests/pending.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
-```GET /leave_requests.json?status=pending
-X-API-Version: 2.0.0
+```
+GET /leave_requests.json?status=pending
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Request
@@ -65,17 +77,24 @@ X-API-Version: 2.0.0
 Get all REJECTED leave requests in TribeHR
 
 
-```GET /leave_requests/rejected.json
-X-API-Version: 2.0.0
+```
+GET /leave_requests/rejected.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
-```GET /leave_requests.json?status=rejected
-X-API-Version: 2.0.0
+```
+GET /leave_requests.json?status=rejected
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Response
-```Status: 200 OK```
-```Content-Type: application/json
+```
+Status: 200 OK
+Content-Type: application/json
+```
+```
 [
     {
         "id": 17
@@ -143,4 +162,65 @@ X-API-Version: 2.0.0
             "url": "/leave_types/1.json"
         }
     }
-]```
+]
+```
+
+
+## Get Selected Leave Requests
+
+View details about selected Leave Request, remember, data are filtered according to authorized user permission.
+
+### Request
+
+Get selected leave request in TribeHR.
+
+```
+GET /leave_requests/2.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
+```
+
+### Response
+```
+Status: 200 OK
+Content-Type: application/json
+```
+```
+{
+  "id": 2,
+  "comments": "Approved request",
+  "date_start": "2012-01-24",
+  "date_end": "2012-01-27",
+  "days": 3,
+  "hours": 22.5,
+  "status": "APPROVED",
+  "created": "2012-01-24T00:00:00+00:00",
+  "modified": "2012-11-19T14:15:12+00:00",
+  "url": "/leave_requests/2.json",
+  "user": {
+    "id": "18",
+    "username": "Annabelle",
+    "avatar": {
+      "url": "/attachments/view/User/avatar/18"
+    },
+    "email": "FakeEmail+15@ribbitco.biz",
+    "display_name": "Annabelle Skyles",
+    "assignment_record": {
+      "current": true,
+      "url": "/assignment_records/153.json"
+    },
+    "employee_record": {
+      "first_name": "Annabelle",
+      "last_name": "Skyles",
+      "url": "/employee_records/116.json"
+    },
+    "url": "/users/18.json"
+  },
+  "leave_type": {
+    "id": 1,
+    "name": "Vacation",
+    "accrual": "MONTHLY",
+    "url": "/leave_types/1.json"
+  }
+}
+```
