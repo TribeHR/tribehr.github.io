@@ -1,6 +1,6 @@
 ---
-category: API v2
-title: 'Sending Kudos'
+category: API v3
+title: 'Creating Kudos'
 type: 'POST'
 path: '/kudos'
 
@@ -28,9 +28,10 @@ The **`poster`** of the kudos is assumed to be the user authenticated on this re
 specify the **`poster`** in your request.
 
 
-```POST /kudos.json?formattedTextAs=html
-X-API-Version: 2.0.0
-X-Source: Awesome Kudos-Posting App
+```
+POST /kudos.json?formattedTextAs=html
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 recipients[][id]=6&
 recipients[][id]=17&
 text=You%27ve%20done%20a%20%3Ci%3Ewonderful%3C%2Fi%3E%20job%20recently.&
@@ -39,8 +40,12 @@ values[][id]=11
 
 ### Response
 
-```Status: 200 OK```
-```{
+```
+Status: 200 OK
+```
+
+```
+{
     "id": 88,
     "poster": {
         "id": 1,

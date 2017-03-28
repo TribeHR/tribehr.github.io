@@ -1,5 +1,5 @@
 ---
-category: API v2
+category: API v3
 title: 'Getting Events'
 type: 'GET'
 path: '/events'
@@ -16,17 +16,24 @@ requests.
 future) and events that start in the future.
 - Events are sorted by start date, and the response contains all "upcoming" events (as defined above) or
 the 50 soonest "upcoming" events, whichever is less.
+- Birthdays, anniversaries are not included in response. 
 
 **`/events.json`** is an alias to this API endpoint.
 
-```GET /events/upcoming.json
-X-API-Version: 2.0.0
+```
+GET /events/upcoming.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Response
 
-```Status: 200 OK```
-```Content-Type: application/json
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
 [
     {
         "id": 20,
@@ -64,7 +71,80 @@ X-API-Version: 2.0.0
             "url": "/locations/view/3.json"
         }
     }
-]```
+]
+```
+
+### Request
+List of all upcoming event. Data are filtered according to users permissions.
+
+Events are sorted by start date ascending, and by default all holidays are returned.
+
+Available Filters:
+
+- **`days`** *(integer, optional)* *default:30* - count of days you want to see.
+
+```
+GET /calendar/upcoming.json?days=30
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
+```
+
+### Response
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
+[
+  {
+    "type": "company_event",
+    "title": "Big Company Event",
+    "description": "rest",
+    "recurrence": null,
+    "start_date": "2017-03-30T14:16:00",
+    "end_date": "2017-03-31T14:16:00",
+    "event": {
+      "id": 34,
+      "name": "Big Company Event",
+      "notes": "<p>Awesome description</p>",
+      "url": "/events/34.json",
+      "start_date": "2017-03-30T14:16:00",
+      "end_date": "2017-03-31T14:16:00",
+      "event_type": {
+        "id": 3,
+        "name": "Training Day",
+        "url": "/event_types/3.json"
+      }
+    }
+  },
+  {
+    "type": "birthday",
+    "title": "Althea Cienfuegos",
+    "description": "Birthday",
+    "recurrence": "yearly",
+    "start_date": "2017-04-04",
+    "end_date": null,
+    "first_occurrence": "1973-04-04",
+    "user": {
+      "id": "15",
+      "username": "Althea",
+      "avatar": {
+        "url": "/attachments/view/User/avatar/15"
+      },
+      "email": "FakeEmail+13@ribbitco.biz",
+      "display_name": "Althea Cienfuegos",
+      "employee_record": {
+        "first_name": "Althea",
+        "last_name": "Cienfuegos",
+        "url": "/employee_records/109.json"
+      },
+      "url": "/users/15.json"
+    }
+  },
+  ...
+ ]
+```
 
 ### Request
 List events that have been marked as official holidays in TribeHR.
@@ -76,13 +156,19 @@ Available Filters:
 - **`year`** *(integer, optional)* - you may provide a 4-digit year, to return 
 only the events occuring in that year. Includes events which have at least one day in the given year.
 
-```GET /events/holidays.json?year=YYYY
-X-API-Version: 2.0.0
+```
+GET /events/holidays.json?year=YYYY
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Response
-```Status: 200 OK```
-``` Content-Type: application/json
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
 [
   {
     "id": 12,

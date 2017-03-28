@@ -631,7 +631,7 @@ code {
   padding: 0 1px;
 }
 
-#content .body p > code {
+#content .body p > code, #content .body pre > code {
   display: block;
   padding: 15px;
   white-space: pre;

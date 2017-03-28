@@ -1,5 +1,5 @@
 ---
-category: API v2
+category: API v3
 title: 'Modifying Leave Requests'
 type: 'PUT'
 path: '/leave_requests'
@@ -8,25 +8,33 @@ layout: default
 ---
 
 Modify an existing Leave Request. Supports all of the same parameters as the
-**`POST`** request above, but you **must** incldue an **`:id`** parameter that matches the
+**`POST`** request above, but you **must** include an **`:id`** parameter that matches the
 ID in the URL.
 
 Similarly to **`POST`** requests against **`/leave_requests.json`**, if both **`:hours`** and
 **`:days`** are set, **`:days`** will be ignored in favour of the value of **`:hours`**.
 
-The exmaple request here approves a currently-pending leave request.
+The example request here approves a currently-pending leave request.
 
 ### Request
 
-```PUT /leave_requests/{id}.json
-X-API-Version: 2.0.0
-id=1&status=APPROVED
+```
+PUT /leave_requests/194.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
+Content-Type: application/x-www-form-urlencoded
+
+id=194&status=APPROVED
 ```
 
 ### Response 
 
-```Status: 200 OK```
-```Content-Type: application/json; charset=UTF-8
+```
+Status: 200 OK
+Content-Type: application/json; charset=UTF-8
+```
+
+```
 {
     "id": 1,
     "comments": "My cousin is getting married!",
@@ -56,4 +64,5 @@ id=1&status=APPROVED
         "accrual": "NONE",
         "url": "/leave_types/1.json"
     }
-}```
+}
+```

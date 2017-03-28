@@ -1,6 +1,6 @@
 ## TribeHR Static API Documentation
 
-Fork & Clone this repository with `git clone -o personal git@github.com:<your username>/tribehr.github.io`
+Fork & Clone this repository with `git clone -o personal git@gitlab.eng.netsuite.com:<your username>/tribehr.github.io.git`
 
 Install jekyll with ruby gems with `gem install jekyll`
 

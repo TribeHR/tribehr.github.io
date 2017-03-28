@@ -4,7 +4,11 @@ title: 'Version History'
 layout: default
 ---
 
-## Current Version: 2.2.0
+## Current Version: 3.0.0
+
+### 3.0.0
+
+This version add support for new permission system. And deprecated other api versions. 
 
 ### 2.2.0
 
