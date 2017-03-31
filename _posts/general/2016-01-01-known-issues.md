@@ -1,7 +1,6 @@
 ---
 category: General
 title: 'Known Issues'
-
 layout: default
 ---
 

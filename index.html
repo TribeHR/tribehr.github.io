@@ -8,11 +8,27 @@ layout: default
 
 <section id='content'>
 {% for post in site.posts %}
-  <article class='{{ post.type }}'>
-    <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.path }}</code> {% endif %}{{ post.title }}</h2></a>
-    <section class='body'>
-      {{ post.content }}
-    </section>
-  </article>
+    {% if post.category == null %}
+    <article class='{{ post.type }}'>
+        <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.api_path }}</code> {% endif %}{{ post.title }}</h2></a>
+        <section class='body'>
+            {{ post.content }}
+        </section>
+    </article>
+    {% endif %}
+{% endfor %}
+{% for category in site.categories %}
+    {% for posts in category %}
+        {% for post in posts %}
+        {% if post.category != null %}
+            <article class='{{ post.type }}'>
+                <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.api_path }}</code> {% endif %}{{ post.title }}</h2></a>
+                <section class='body'>
+                    {{ post.content }}
+                </section>
+            </article>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
 {% endfor %}
 </section>

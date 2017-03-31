@@ -1,7 +1,6 @@
 ---
 category: General
 title: 'Users and Accounts'
-
 layout: default
 ---
 

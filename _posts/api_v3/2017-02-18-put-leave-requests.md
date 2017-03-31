@@ -2,7 +2,7 @@
 category: API v3
 title: 'Modifying Leave Requests'
 type: 'PUT'
-path: '/leave_requests'
+api_path: '/leave_requests'
 
 layout: default
 ---

@@ -2,7 +2,7 @@
 category: API v3
 title: 'Modify an Event'
 type: 'PUT'
-path: '/events'
+api_path: '/events'
 
 layout: default
 ---
@@ -12,13 +12,15 @@ layout: default
 Modify an existing Event. Supports all of the same parameters as the **`POST`** request above, but you
 **must** include an **`:id`** parameter that matches the ID in the URL.
 
-The example request here updates the name and start date of event #254.
+The example request here updates the name and start date of event #254. Also remove one location from event. 
 
 ```
 PUT /events/{id}.json
 Authorization: Basic <base64 encoded token> 
 X-API-Version: 3.0.0
 id=254&
+location[][id]=1&
+location[][id]=null&
 name=New%20event%20%28Updated%20Time%21%29&
 start_date=2013-08-30T18%3A00%3A00%2B00%3A00
 ```
@@ -50,11 +52,6 @@ Status: 200 OK
             "id": 1,
             "name": "Central Rental",
             "url": "/locations/1.json"
-        },
-        {
-            "id": 7,
-            "name": "Headquarters",
-            "url": "/locations/7.json"
         }
     ]
 }

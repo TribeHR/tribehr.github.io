@@ -2,7 +2,7 @@
 category: API v3
 title: 'Create a New Event'
 type: 'POST'
-path: '/events'
+api_path: '/events'
 
 layout: default
 ---

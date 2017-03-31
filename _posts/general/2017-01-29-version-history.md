@@ -1,6 +1,6 @@
 ---
+category: General
 title: 'Version History'
-
 layout: default
 ---
 

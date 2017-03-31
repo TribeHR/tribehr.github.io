@@ -2,16 +2,20 @@
 category: API v3
 title: 'Deleting Resources'
 type: 'DELETE'
-path: '/[any resource]/{id}'
-
+api_path: '/[any resource]/{id}'
 layout: default
 ---
 
-All resources are deleted in the same way - just send a **`DELETE`** request to a resource's URL.
+Some resources can be deleted in the same way - just send a **`DELETE`** request to a resource's URL.
 **`DELETE`** requests may only be sent to URLs that represent a *single* item (such as **`/events/{id}.json`**)
 but may not be sent to URLs that represent collections of resources (such as **`/events.json`**).
 You **must** include an **`:id`** parameter that matches the ID in the URL.
  
+We support API for deleting this resources:
+ - **Events**: /events/39.json
+ - **Kudos**: /kudos/79.json
+ - **Leave Request**: /leave_requests/196.json
+
 
 An example follows:
 
