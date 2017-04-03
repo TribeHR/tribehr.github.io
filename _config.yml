@@ -1,6 +1,7 @@
 ---
 exclude: ['README.md']
 permalink: ':title'
-highlighter: pygments
+markdown:    kramdown
+highlighter: rouge
 safe: false
 title: 'TribeHR API Documentation'

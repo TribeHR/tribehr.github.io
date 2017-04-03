@@ -2,7 +2,7 @@
 category: API v3
 title: 'Creating Kudos'
 type: 'POST'
-path: '/kudos'
+api_path: '/kudos'
 
 layout: default
 ---
@@ -13,10 +13,7 @@ Parameters:
 
 - **`:recipients[][id]`** *(integer; one or more **`:recipients[][id]`** parameters should be present)* - the 
   ID(s) of the recipients of this kudos
-- **`:text`** *(string)* - the text of the kudos
-- **`:picture`** *(image)* - a picture to attach to the kudos.  To attach a picture to a kudos, you'll need
-   to send your request encoded as **`multipart/formdata`**. Your picture should be included in a part with 
-   the name **`:picture`**.
+- **`:text`** *(string, required)* - the text of the kudos
 - **`:values[][id]`** *(integer; zero or more **`:values[][id]`** parameters may be present)* - the ID(s) of
   any values that should be attached to this kudos
    

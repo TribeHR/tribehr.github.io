@@ -2,7 +2,7 @@
 category: API v3
 title: 'Getting Job Posting'
 type: 'GET'
-path: '/job_postings'
+api_path: '/job_postings'
 
 layout: default
 ---

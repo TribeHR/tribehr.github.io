@@ -2,7 +2,7 @@
 category: 'API v3' 
 title: 'Getting Leave Types'
 type: 'GET'
-path: '/leave_types'
+api_path: '/leave_types'
 
 layout: default
 ---

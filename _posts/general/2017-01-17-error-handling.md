@@ -1,7 +1,6 @@
 ---
 category: General
 title: 'Error Handling'
-
 layout: default
 ---
 

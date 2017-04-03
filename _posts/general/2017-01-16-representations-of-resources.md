@@ -1,7 +1,6 @@
 ---
 category: General
 title: 'Representations of Resources'
-
 layout: default
 ---
 

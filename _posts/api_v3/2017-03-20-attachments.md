@@ -2,7 +2,7 @@
 category: API v3
 title: 'Getting Attachments'
 type: 'GET'
-path: '/attachments'
+api_path: '/attachments'
 
 layout: default
 ---

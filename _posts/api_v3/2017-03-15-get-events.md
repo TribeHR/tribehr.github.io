@@ -2,7 +2,7 @@
 category: API v3
 title: 'Getting Events'
 type: 'GET'
-path: '/events'
+api_path: '/events'
 
 layout: default
 ---
@@ -217,14 +217,20 @@ Content-Type: application/json
 
 View details about an individual event.
 
-```GET /events/{id}.json
-X-API-Version: 2.0.0
+```
+GET /events/{id}.json
+Authorization: Basic <base64 encoded token> 
+X-API-Version: 3.0.0
 ```
 
 ### Response
 
-```Status: 200 OK```
-```Content-Type: application/json
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
 {
   "id": 252,
   "name": "Fun Family Event",

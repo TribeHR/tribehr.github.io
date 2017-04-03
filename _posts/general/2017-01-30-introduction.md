@@ -9,8 +9,10 @@ layout: default
 
 Welcome to TribeHR's API documentation. We provide a RESTful API in order for 3rd party integrations or 
 apps to request or deliver data to the TribeHR web app. We are pleased to announce the availability of 
-version 2.0 of our API, which is documented here. For information about our old API, which is currently 
-still available, please refer to [developers.tribehr.com/api](http://developers.tribehr.com/api).
+version 3.0 of our API, which is documented here. We are not supporting our old API anymore. 
+There are some differences between current API and previous API version.
+
+Most of these changes are related to permission and relation between data, so in response can be some data hidden. 
 
 Please be aware that this is not yet a fully released product and as such we are not able to provide full 
 support yet. If you run into issues, however, feel free to contact [support@tribehr.com](mailto:support@tribehr.com), 
