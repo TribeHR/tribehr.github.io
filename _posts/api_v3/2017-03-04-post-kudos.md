@@ -47,6 +47,9 @@ Status: 200 OK
     "poster": {
         "id": 1,
         "username": "admin",
+        "avatar": {
+            "url": "/attachments/view/User/avatar/1"
+        },
         "email": "devnull+admin@tribehr.com",
         "display_name": "Tribe Admin",
         "employee_record": {
@@ -60,6 +63,9 @@ Status: 200 OK
         {
             "id": 6,
             "username": "abbyring",
+            "avatar": {
+                "url": "/attachments/view/User/avatar/6"
+            },
             "email": "devnull+abbyring@tribehr.com",
             "display_name": "Abby Ring",
             "employee_record": {
@@ -72,6 +78,9 @@ Status: 200 OK
         {
             "id": 17,
             "username": "willytrainer",
+            "avatar": {
+                "url": "/attachments/view/User/avatar/17"
+            },
             "email": "devnull+willytrainer@tribehr.com",
             "display_name": "Willy Trainer",
             "employee_record": {
