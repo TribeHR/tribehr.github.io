@@ -12,7 +12,7 @@ layout: default
 Get all Job Postings.
 
 ```
-GET /postings.json
+GET /job_postings.json
 Authorization: Basic <base64 encoded token> 
 X-API-Version: 3.0.0
 ```
@@ -76,7 +76,7 @@ View details about an individual Job Posting.
 Note that the **`description`** field is only HTML field, TribeHR doesn't use RichText format here.
 
 ```
-GET /postings/{id}.json
+GET /job_postings/{id}.json
 Authorization: Basic <base64 encoded token> 
 X-API-Version: 3.0.0
 ```
