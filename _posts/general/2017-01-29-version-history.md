@@ -8,7 +8,7 @@ layout: default
 
 ### 3.0.0
 
-This version add support for new permission system. And deprecated other api versions. 
+This version adds support for new permission system. And deprecates other api versions. 
 
 ### 2.2.0
 
